@@ -976,10 +976,10 @@ def generate_bins_dt64(ndarray[int64_t] values, ndarray[int64_t] binner,
 
     # check binner fits data
     if values[0] < binner[0]:
-        raise ValueError("Values falls before first bin")
+        raise ValueError("Value falls before first bin")
 
     if values[lenidx-1] > binner[lenbin-1]:
-        raise ValueError("Values falls after last bin")
+        raise ValueError("Value falls after last bin")
 
     bins   = np.empty(lenbin - 1, dtype=np.int64)
 
